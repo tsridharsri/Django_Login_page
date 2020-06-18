@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title> Nmap Scanner </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </head>
+<body>
+    <div class="container" align='center'>
+        <h1>Hello, </h1>
+        <h1>Please Enter the ip_address </h1><br><br>
+        <form action="" method="post">
+            <input type='text' name="param" required><br><br>
+            {% csrf_token %}
+            {{data_external}}<br><br>
+            <h3>Please choose the type of scan you want to run</h3>
+            <label for='option-11' style=' padding: 1px; font-size: 1rem;'>
+                <input type='radio' name='option' id='option-11' value="1"/>
+                SYN ACK Scan
+            </label>
+            <hr/>
+            <label for='option-12' style=' padding: 1px; font-size: 1rem;'>
+                <input type='radio' name='option' id='option-12' value="2"/>
+                UDP Scan
+            </label>
+            <hr/>  
+            <label for='option-13' style=' padding: 1px; font-size: 1rem;'>
+                <input type='radio' name='option' id='option-13' value="3"/>
+                Comprehensive Scan
+            </label>
+            <hr/>  
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+    
+</body> 
+</html>
